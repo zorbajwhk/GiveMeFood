@@ -1,6 +1,6 @@
 {
-  "name": "ravenous",
-  "version": "0.1.0",
+  "name": "GiveMeCoffee",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "react": "^17.0.1",

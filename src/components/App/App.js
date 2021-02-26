@@ -28,11 +28,17 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="header">
-        <h1>GiveME☕️</h1>
-        <h6>Zorba Jobs Wong | PI11A124 | A08</h6>
+          <h1>GiveME☕️</h1>
+          <h6>Zorba Jobs Wong | PI11A124 | A08</h6>
         </div>
+        
         <SearchBar searchYelp={this.searchYelp} />
+        
         <BusinessList businesses={this.state.businesses} />
+      
+        <div className="footer">
+          <small>Copyright © <a target="_blank" href="https://zorbajobswong.com">Zorba Jobs Wong</a>, All Rights Reserved.</small>
+        </div>
       </div>
     );
   }
