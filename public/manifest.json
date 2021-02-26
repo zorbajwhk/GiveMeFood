@@ -1,0 +1,22 @@
+{
+  "short_name": "GiveME☕️",
+  "name": "GiveME☕️ - コーヒーラバの専用捜索エンジン",
+  "icons": [
+    {
+      "src": "public/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "public/icons-576.png",
+      "type": "image/png",
+      "sizes": "576x576"
+    }
+  ],
+
+  "start_url": "./index.html",
+  "display": "minimal-ui",
+  "theme_color": "#222222",
+  "background_color": "#ffffff",
+  "scope": "/"
+}
