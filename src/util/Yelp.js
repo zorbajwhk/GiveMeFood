@@ -4,7 +4,7 @@ const apiKey = config.yelpAPI; // Insert API key here.
 
 const Yelp = {
   search(location, sortBy) {
-    return fetch(`https://thingproxy.freeboard.io/fetch/https://api.yelp.com/v3/businesses/search?term=coffee&location=${location}&sort_by=${sortBy}&limit=40`, {
+    return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=coffee&location=${location}&sort_by=${sortBy}&limit=40`, {
       headers: {
         Authorization: `Bearer ${apiKey}`,
       }
