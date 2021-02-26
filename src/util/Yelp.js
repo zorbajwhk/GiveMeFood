@@ -1,4 +1,6 @@
-const apiKey = '2bzaz9MBzj9iHOU0U46YLDzIeqAVLoU65WsAO8Uzknpy_fcWZgl-l2kkrrWzv9YKbZwcZ7Q_BywEIxvJe8gEmCfUGM4am2KAvqyBB0lrmQAoBPXYq6V_Ejg9W2s2YHYx'; // Insert API key here.
+import config from './config';
+
+const apiKey = config.yelpAPI; // Insert API key here.
 
 const Yelp = {
   search(location, sortBy) {
