@@ -2,7 +2,7 @@ const apiKey = '2bzaz9MBzj9iHOU0U46YLDzIeqAVLoU65WsAO8Uzknpy_fcWZgl-l2kkrrWzv9YK
 
 const Yelp = {
   search(location, sortBy) {
-    return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=coffee&location=${location}&sort_by=${sortBy}&limit=40`, {
+    return fetch(`https://api.yelp.com/v3/businesses/search?term=coffee&location=${location}&sort_by=${sortBy}&limit=40`, {
       headers: {
         Authorization: `Bearer ${apiKey}`
       }
