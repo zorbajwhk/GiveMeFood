@@ -2,7 +2,7 @@
   "name": "GiveMeCoffee",
   "version": "1.0.0",
   "private": false,
-  "homepage": "givemecoffee.zorbajobswong.com",
+  "homepage": "http://givemecoffee.zorbajobswong.com",
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
