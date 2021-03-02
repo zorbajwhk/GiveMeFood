@@ -1,4 +1,16 @@
-node_modules
-node_modules
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore the build directory
+/dist
+/build
+
+# Ignore the design directory
+/designs
+
+# Ingore logs
+logs
+*.log
+
+# Ingore API and Keys
 config.js
-apiKey.json
