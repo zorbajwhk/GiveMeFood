@@ -1,6 +1,13 @@
-## GiveMeCoffee v1.1.2
+## GiveMeCoffee v1.2.0
 
 A serverless client-side React application project, utilizing the Yelp API to search for coffee in the area.
+
+v1.2.0 Update Log:
+
+- Added PWA icon sets for iOS, Android & Windows Phone.
+- Added new App Logo.
+- Enchanced CSS for mobile.
+- Enchanced CSS for desktop.
 
 v1.1.2 Update Log:
 

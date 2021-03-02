@@ -27,16 +27,65 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/assets/images/favicon.png" />
     <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
+      iOS Add to Homescreen fallbacks
     -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="GiveMe☕️" />
+    <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/assets/images/icon-72x72.png"
+      sizes="72x72"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/assets/images/icon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/assets/images/icon-128x128.png"
+      sizes="128x128"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/assets/images/icon-144x144.png"
+      sizes="144x144"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/assets/images/icon-152x152.png"
+      sizes="152x152"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/assets/images/icon-192x192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/assets/images/icon-384x384.png"
+      sizes="384x384"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/assets/images/icon-512x512.png"
+      sizes="512x512"
+    />
+    <!--
+      Windows Phone Add to Homescreen fallbacks
+    -->
+    <meta
+      name="msapplication-TileImage"
+      content="%PUBLIC_URL%/assets/images/icon-144x144.png"
+    />
+    <meta name="msapplication-TileColor" content="black-translucent" />
+
     <title>GiveME☕️ - コーヒーラヴァーの専用捜索エンジン</title>
   </head>
   <body>

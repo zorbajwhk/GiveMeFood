@@ -1,10 +1,11 @@
 {
   "name": "GiveMeCoffee",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "private": false,
   "homepage": "http://givemecoffee.zorbajobswong.com",
   "dependencies": {
     "react": "^17.0.1",
+    "react-add-to-homescreen": "^1.1.0",
     "react-dom": "^17.0.1",
     "whatwg-fetch": "^2.0.3"
   },

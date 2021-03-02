@@ -48,7 +48,7 @@ h1 {
 }
 
 h6 {
-  padding: 0.66rem 0;
+  padding: 1rem 0;
   text-align: center;
   letter-spacing: 5px;
   background-color: #222;
@@ -58,10 +58,29 @@ h6 {
   color: #fff;
 }
 
+@media only screen and (max-width: 560px) {
+  h6 {
+    font-size: 0.4rem;
+    letter-spacing: 3px;
+  }
+}
+
 .header {
-  height: 3.2rem;
-  align-items: center;
-  margin: 0 auto;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.header img {
+  height: 100%;
+  display: block;
+  width: auto;
+  margin: 10px auto 0 auto;
+}
+
+@media only screen and (max-width: 560px) {
+  .header {
+    height: 2.5rem;
+  }
 }
 
 .footer {
@@ -87,4 +106,11 @@ h6 {
 
 .footer a:hover {
   color: #fff;
+}
+
+@media only screen and (max-width: 560px) {
+  .footer small {
+    font-size: 0.5rem;
+    letter-spacing: 3px;
+  }
 }
