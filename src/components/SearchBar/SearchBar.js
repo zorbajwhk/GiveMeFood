@@ -62,7 +62,7 @@ class SearchBar extends React.Component {
 
   triggerSearch(event){
     const location = this.state.location
-    if(!/^[a-zA-Z]+$/.test(location)){
+    if(!/^[a-zA-Z ]+$/.test(location)){
       this.handleLocationTranslation(location);
       event.preventDefault();
     }else{
