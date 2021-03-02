@@ -1,8 +1,8 @@
 # Ignore the node_modules directory
-node_modules/
+node_modules
 
-# Ignore the design directory
-designs
+# Ignore the node_modules directory
+build
 
 # Ingore logs
 logs
