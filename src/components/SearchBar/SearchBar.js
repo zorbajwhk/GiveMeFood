@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
+import config from '../../util/config';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -15,6 +16,8 @@ class SearchBar extends React.Component {
     this.handleLocationChange = this.handleLocationChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSortByChange = this.handleSortByChange.bind(this);
+    this.handleLocationTranslation = this.handleLocationTranslation.bind(this);
+    this.triggerSearch = this.triggerSearch.bind(this);
 
     this.sortByOptions = {
       'おすすめ順': 'best_match',
@@ -34,18 +37,42 @@ class SearchBar extends React.Component {
     this.setState({sortBy: sortByOption});
   }
 
-  // handleTermChange(event) {
-  //   this.setState({term: event.target.value});
-  // }
-
   handleLocationChange(event) {
     this.setState({location: event.target.value});
   }
 
-  handleSearch(event) {
-    this.props.searchYelp(this.state.location, this.state.sortBy);
+  handleLocationTranslation(ogLocation){
+    fetch(`https://google-translate20.p.rapidapi.com/translate?text=${ogLocation}&tl=en&sl=ja`, {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-key": config['x-rapidapi-key'],
+        "x-rapidapi-host": config['x-rapidapi-host']
+      }
+    })
+    .then(response => {
+          return response.json();
+        }).then(jsonResponse => {
+          const translation = jsonResponse.data.translation
+          console.log(translation);
+          this.setState({location: translation});
+          this.handleSearch();
+        });
+  }
 
+
+  triggerSearch(event){
+    const location = this.state.location
+    if(!/^[a-zA-Z]+$/.test(location)){
+      this.handleLocationTranslation(location);
+      event.preventDefault();
+    }else{
+    this.handleSearch();
     event.preventDefault();
+    };
+  }
+
+  handleSearch(){
+      this.props.searchYelp(this.state.location, this.state.sortBy);
   }
 
   renderSortByOptions() {
@@ -69,10 +96,10 @@ class SearchBar extends React.Component {
         </div>
         <div className="SearchBar-fields">
           {/* <input placeholder="Search Businesses" onChange={this.handleTermChange} /> */}
-          <input placeholder="どの辺のお店を探したいですか？" onChange={this.handleLocationChange}/>
+          <input placeholder="どの辺のお店を探したいですか？" onChange={this.handleLocationChange} onKe/>
         </div>
         <div className="SearchBar-submit">
-          <a onClick={this.handleSearch}>レッツゴー!</a>
+          <button onClick={this.triggerSearch}>レッツゴー!</button>
         </div>
       </div>
     );

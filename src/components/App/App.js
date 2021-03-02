@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo150px.png';
 import './App.css';
 
 import BusinessList from '../BusinessList/BusinessList';
@@ -18,8 +17,8 @@ class App extends React.Component {
     this.searchYelp = this.searchYelp.bind(this);
   }
 
-  searchYelp(term, location, sortBy) {
-    Yelp.search(term, location, sortBy).then(businesses => {
+  searchYelp(location, sortBy) {
+    Yelp.search(location, sortBy).then(businesses => {
       this.setState({businesses: businesses});
     });
   }
@@ -28,7 +27,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="header">
-          <h1>GiveME☕️</h1>
+          <h1>GiveME<span role="img" aria-label="コーヒー">☕️</span></h1>
           <h6>Zorba Jobs Wong | PI11A124 | A08</h6>
         </div>
         
@@ -37,7 +36,8 @@ class App extends React.Component {
         <BusinessList businesses={this.state.businesses} />
       
         <div className="footer">
-          <small>Copyright © <a target="_blank" href="https://zorbajobswong.com">Zorba Jobs Wong</a>, All Rights Reserved.</small>
+          <small>GiveME<span role="img" aria-label="コーヒー">☕️</span> v1.1.0</small>
+          <small>Copyright © <a target="_blank" rel="noopener" href="https://zorbajobswong.com">Zorba Jobs Wong</a>, All Rights Reserved.</small>
         </div>
       </div>
     );
