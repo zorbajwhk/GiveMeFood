@@ -1,6 +1,7 @@
 /* Universal Styles */
 
 html {
+  height: 100%;
   font-size: 18px;
   background-color: #222;
   font-family: "Noto Sans JP", sans-serif;

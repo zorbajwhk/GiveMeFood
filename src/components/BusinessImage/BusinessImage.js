@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './BusinessImage.css';
 
 
@@ -20,11 +19,9 @@ class BusinessImage extends React.Component{
     onClickHandeler(event){
         if(this.state.isOpen ===false){
             this.setState({isOpen: true});
-            console.log(this.state.isOpen);
             return;
         }else{
             this.setState({isOpen: false});
-            console.log(this.state.isOpen);
             return;
         }
     }

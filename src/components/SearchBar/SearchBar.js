@@ -24,6 +24,7 @@ class SearchBar extends React.Component {
       '評価順': 'rating',
       '口コミ順': 'review_count'
     };
+
   }
 
   getSortByClass(sortByOption) {
@@ -95,7 +96,7 @@ class SearchBar extends React.Component {
           </ul>
         </div>
         <div className="SearchBar-fields">
-          <input placeholder="どの辺のお店をお探したいですか？" onChange={this.handleLocationChange} onKe/>
+          <input placeholder="どの辺のお店をお探したいですか？" onChange={this.handleLocationChange}/>
         </div>
         <div className="SearchBar-submit">
           <button onClick={this.triggerSearch}>レッツゴー!</button>

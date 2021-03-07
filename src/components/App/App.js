@@ -27,17 +27,19 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="header">
-          <img src={logo} alt="GiveMeCoffee Logo"/>
+          <a href="./">
+            <img src={logo} alt="GiveMeCoffee Logo"/>
+            </a>
           <h6>Zorba Jobs Wong | PI11A124 | A08</h6>
         </div>
         
-        <SearchBar searchYelp={this.searchYelp} />
+        <SearchBar searchYelp={this.searchYelp} businesses={this.state.businesses} />
         
         <BusinessList businesses={this.state.businesses} />
       
         <div className="footer">
           <small><a target="_black" href="https://github.com/zorbajwhk/GiveMeCoffee">GiveME<span role="img" aria-label="コーヒー">☕️</span></a> v1.3.1 | Made with <span role="img" aria-label="ハート">❤️</span></small>
-          <small>Copyright © <a target="_blank" rel="noopener" href="https://zorbajobswong.com">Zorba Jobs Wong</a>, All Rights Reserved.</small>
+          <small>Copyright © <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/zorbajobswong/">Zorba Jobs Wong</a>, All Rights Reserved.</small>
         </div>
       </div>
     );
