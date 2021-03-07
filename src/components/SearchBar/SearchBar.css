@@ -5,10 +5,10 @@
   background-image: url("./background_search_desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center center;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  height: 40rem;
+  height: 30rem;
 }
 
 .SearchBar-sort-options ul {
@@ -98,6 +98,7 @@
 @media only screen and (max-width: 560px) {
   .SearchBar {
     background-image: url("./background_search_mobile.jpg");
+    height: 40rem;
   }
 
   .SearchBar-sort-options ul {
