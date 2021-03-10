@@ -5,6 +5,7 @@
   "homepage": "http://givemecoffee.zorbajobswong.com",
   "dependencies": {
     "@loadable/component": "^5.14.1",
+    "mime": "^1.6.0",
     "react": "^17.0.1",
     "react-add-to-homescreen": "^1.1.0",
     "react-dom": "^17.0.1",
