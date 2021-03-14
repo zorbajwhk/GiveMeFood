@@ -99,7 +99,7 @@ class SearchBar extends React.Component {
           <input placeholder="どの辺のお店をお探したいですか？" onChange={this.handleLocationChange}/>
         </div>
         <div className="SearchBar-submit">
-          <button onClick={this.triggerSearch}>レッツゴー!</button>
+          <button onClick={this.triggerSearch} onKeyDown>レッツゴー!</button>
         </div>
       </div>
     );

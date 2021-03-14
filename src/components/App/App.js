@@ -30,7 +30,7 @@ class App extends React.Component {
           <a href="./">
             <img src={logo} alt="GiveMeCoffee Logo"/>
             </a>
-          <h6>Zorba Jobs Wong | PI11A124 | A08</h6>
+          <h6>Zorba Jobs Wong | 東京IT606 | 情報処理学科１年生</h6>
         </div>
         
         <SearchBar searchYelp={this.searchYelp} businesses={this.state.businesses} />
@@ -38,7 +38,7 @@ class App extends React.Component {
         <BusinessList businesses={this.state.businesses} />
       
         <div className="footer">
-          <small><a target="_black" href="https://github.com/zorbajwhk/GiveMeCoffee">GiveME<span role="img" aria-label="コーヒー">☕️</span></a> v1.3.2 | Made with <span role="img" aria-label="ハート">❤️</span></small>
+          <small><a target="_black" href="https://github.com/zorbajwhk/GiveMeCoffee">GiveME<span role="img" aria-label="コーヒー">☕️</span></a> v1.4.0 | Made with <span role="img" aria-label="ハート">❤️</span></small>
           <small>Copyright © <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/zorbajobswong/">Zorba Jobs Wong</a>, All Rights Reserved.</small>
         </div>
       </div>

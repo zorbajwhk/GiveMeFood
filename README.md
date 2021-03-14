@@ -1,6 +1,15 @@
-## GiveMeCoffee v1.3.2
+## GiveMeCoffee v1.4.0
 
 A serverless client-side React application project, utilizing the Yelp API to search for coffee in the area.
+
+v1.4.0 Update Log:
+
+- Added iOS PWA support.
+- Added splash screen support for iOS devices. (iPhone 5 Series - iPhone 12 Series, iPad Pro Series, iPad Air Series, iPad Mini Series)
+- Added "Install as PWA" popup on iOS devices.
+- Corrected splash screen color on Android devices while using as PWA.
+- Changed mobile version's background image on search bar for a better UX.
+- Changed desktop version's background image size for a better UX.
 
 v1.3.2 Update Log:
 
