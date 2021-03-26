@@ -30,7 +30,6 @@ class App extends React.Component {
           <a href="./">
             <img src={logo} alt="GiveMeCoffee Logo"/>
             </a>
-          <h6>Zorba Jobs Wong | 東京IT606 | 情報処理学科１年生</h6>
         </div>
         
         <SearchBar searchYelp={this.searchYelp} businesses={this.state.businesses} />

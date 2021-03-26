@@ -1,6 +1,10 @@
-## GiveMeCoffee v1.4.0
+## GiveMeCoffee v1.4.1
 
 A serverless client-side React application project, utilizing the Yelp API to search for coffee in the area.
+
+v1.4.1 Update Log:
+
+- Minor update to site title text.
 
 v1.4.0 Update Log:
 
