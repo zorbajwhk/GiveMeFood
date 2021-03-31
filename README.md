@@ -2,6 +2,10 @@
 
 A serverless client-side React application project, utilizing the Yelp API to search for coffee in the area.
 
+v1.5.0 Update Log:
+
+- Added OpenGraph support for better sharing experiences.
+
 v1.4.1 Update Log:
 
 - Minor update to site title text.
