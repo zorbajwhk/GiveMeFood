@@ -31,7 +31,7 @@ class App extends React.Component {
 
         <div className="header">
           <a href="./">
-            <img src={logo} alt="GiveMeCoffee Logo"/>
+            <img src={logo} alt="GiveMeFood Logo"/>
             </a>
         </div>
         

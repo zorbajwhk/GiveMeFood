@@ -1,14 +1,12 @@
 import React from 'react';
 import './BusinessImage.css';
+import ShopDetails from '../ShopDetails/ShopDetails';
 
 
 class BusinessImage extends React.Component{
     constructor(props){
         super(props);
 
-        this.src = this.props.src;
-        this.alt = this.props.alt;
-        
         this.state ={
             "isOpen": false,
         }
@@ -29,12 +27,12 @@ class BusinessImage extends React.Component{
     render(){
         return(
             <div className="BusinessImage">
-                <img className="normal" src={this.src} alt={this.alt} onClick={this.onClickHandeler}/>
+                <img className="list" src={this.props.business.imgPc} alt={this.props.business.name} onClick={this.onClickHandeler}/>
                 
                 {this.state.isOpen && (
                     <dialog className="dialog" open>
                     <span className="close" onClick={this.onClickHandeler}>&times;</span>
-                    <img className="popup" src={this.src} alt={this.alt} onClick={this.onClickHandeler}/>
+                    <ShopDetails business={this.props.business} />
                     </dialog>
                 )}
 

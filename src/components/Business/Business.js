@@ -7,7 +7,7 @@ class Business extends React.Component {
   render() {
     return (
       <div className="Business">
-        <BusinessImage src={this.props.business.imgPc} alt={this.props.business.name}/>
+        <BusinessImage business={this.props.business}/>
         <h2>{this.props.business.name}</h2>
         <div className="Business-information">
           <div className="Business-address">

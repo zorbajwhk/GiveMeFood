@@ -5,7 +5,7 @@
   border-radius: 0.5rem;
 }
 
-.BusinessImage img {
+.BusinessImage .list {
   height: 16.66rem;
   width: 16.66rem;
   border-radius: 0.5rem;
@@ -14,7 +14,7 @@
   cursor: zoom-in;
 }
 
-.BusinessImage .normal:hover {
+.BusinessImage .list:hover {
   opacity: 0.7;
 }
 
@@ -26,21 +26,8 @@
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0); /*fallback for background */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-.dialog .popup {
-  background-color: #fefefe;
-  display: block;
-  margin: 4rem auto;
-  padding: 10px;
-  border: 1px solid #888;
-  height: fit-content;
-  width: fit-content;
-  max-width: 80%;
-  max-height: 80%;
-  cursor: zoom-out;
 }
 
 .dialog .close {
@@ -59,7 +46,7 @@
 }
 
 @media only screen and (max-width: 560px) {
-  .dialog .popup {
+  .dialog {
     margin: 15rem auto;
     max-width: 80%;
     max-height: 50%;

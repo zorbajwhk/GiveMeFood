@@ -1,0 +1,31 @@
+.detailPage {
+  height: 85%;
+  width: 85%;
+  margin: 2rem auto;
+  background-color: #222;
+  border-radius: 0.5rem;
+}
+
+.detailPage___wrapper {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.detailPage___image {
+  width: 40%;
+}
+
+.detailPage___image img {
+  margin: 5rem;
+  border: 3px solid #fff;
+  border-radius: 0.5rem;
+  height: 30rem;
+  width: 30rem;
+  object-fit: cover;
+}
+
+.detailPage___info {
+  width: 40%;
+}
