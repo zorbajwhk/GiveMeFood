@@ -11,10 +11,16 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      businesses: []
+      businesses: [],
+      videoModalOpen: false,
     };
 
     this.searchYelp = this.searchYelp.bind(this);
+    this.openVideoModal = this.openVideoModal.bind(this)
+  }
+
+  openVideoModal () {
+    this.setState({videoModalOpen: true});
   }
 
   searchYelp(location, sortBy) {
@@ -26,20 +32,23 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+
         <div className="header">
           <a href="./">
             <img src={logo} alt="GiveMeCoffee Logo"/>
             </a>
         </div>
         
-        <SearchBar searchYelp={this.searchYelp} businesses={this.state.businesses} />
-        
-        <BusinessList businesses={this.state.businesses} />
+        <div className="body">
+          <SearchBar searchYelp={this.searchYelp} businesses={this.state.businesses} />
+          <BusinessList businesses={this.state.businesses} />
+        </div>
       
         <div className="footer">
           <small><a target="_black" href="https://github.com/zorbajwhk/GiveMeCoffee">GiveME<span role="img" aria-label="コーヒー">☕️</span></a> v1.5.0 | Made with <span role="img" aria-label="ハート">❤️</span></small>
           <small>Copyright © <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/zorbajobswong/">Zorba Jobs Wong</a>, All Rights Reserved.</small>
         </div>
+
       </div>
     );
   }
