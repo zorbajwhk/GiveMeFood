@@ -17,7 +17,7 @@ class BusinessImage extends React.Component{
     }
 
     onClickHandeler(event){
-        if(this.state.isOpen ===false){
+        if(this.state.isOpen === false){
             this.setState({isOpen: true});
             return;
         }else{

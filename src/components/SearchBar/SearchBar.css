@@ -11,6 +11,14 @@
   height: 35rem;
 }
 
+.SearchBar-sort-options h2 {
+  font-size: 1.3rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0px 0px 1px #000);
+}
+
 .SearchBar-sort-options ul {
   display: flex;
   justify-content: center;
@@ -21,7 +29,7 @@
 .SearchBar-sort-options li {
   cursor: pointer;
   width: 4.33rem;
-  border-bottom: 1px solid #222;
+  border-bottom: 2px solid #222;
   margin-top: 1rem;
   padding: 0 2.55rem 1rem 2.58rem;
   line-height: 1.13;
@@ -40,20 +48,6 @@
 .SearchBar-sort-options li.active:hover {
   border-bottom: 1px solid #fff;
   color: #fff;
-}
-
-@media only screen and (max-width: 560px) {
-  .SearchBar-sort-options li {
-    margin-top: 5rem;
-    padding: 1rem 2.58rem 1rem 2.58rem;
-    border-radius: 1px;
-    font-size: 0.75rem;
-  }
-
-  .SearchBar-sort-options li.active,
-  .SearchBar-sort-options li.active:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
 }
 
 .SearchBar-fields {
@@ -101,6 +95,18 @@
   .SearchBar {
     background-image: url("./background_search_mobile.jpg");
     height: 40rem;
+  }
+
+  .SearchBar-sort-options li {
+    margin-top: 5rem;
+    padding: 1rem 2.58rem 1rem 2.58rem;
+    border-radius: 1px;
+    font-size: 0.75rem;
+  }
+
+  .SearchBar-sort-options li.active,
+  .SearchBar-sort-options li.active:hover {
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .SearchBar-sort-options ul {

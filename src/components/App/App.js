@@ -3,7 +3,7 @@ import './App.css';
 import logo from './logo.png';
 import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
-import Yelp from '../../util/Yelp';
+import Recruit from '../../util/Recruit';
 
 
 class App extends React.Component {
@@ -12,19 +12,15 @@ class App extends React.Component {
 
     this.state = {
       businesses: [],
-      videoModalOpen: false,
     };
 
-    this.searchYelp = this.searchYelp.bind(this);
-    this.openVideoModal = this.openVideoModal.bind(this)
+    this.searchRecruit = this.searchRecruit.bind(this);
   }
 
-  openVideoModal () {
-    this.setState({videoModalOpen: true});
-  }
 
-  searchYelp(location, sortBy) {
-    Yelp.search(location, sortBy).then(businesses => {
+  searchRecruit(latitude, longitude, range) {
+    Recruit.search(latitude, longitude, range)
+    .then(businesses => {
       this.setState({businesses: businesses});
     });
   }
@@ -40,12 +36,12 @@ class App extends React.Component {
         </div>
         
         <div className="body">
-          <SearchBar searchYelp={this.searchYelp} businesses={this.state.businesses} />
+          <SearchBar searchRecruit={this.searchRecruit} businesses={this.state.businesses} />
           <BusinessList businesses={this.state.businesses} />
         </div>
       
         <div className="footer">
-          <small><a target="_black" href="https://github.com/zorbajwhk/GiveMeCoffee">GiveME<span role="img" aria-label="コーヒー">☕️</span></a> v1.5.1 | Made with <span role="img" aria-label="ハート">❤️</span></small>
+          <small><a target="_black" href="https://github.com/zorbajwhk/GiveMeFood">GiveME<span role="img" aria-label="Food">🍽</span></a> v1.0.0 | Made with <span role="img" aria-label="ハート">❤️</span></small>
           <small>Copyright © <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/zorbajobswong/">Zorba Jobs Wong</a>, All Rights Reserved.</small>
         </div>
 

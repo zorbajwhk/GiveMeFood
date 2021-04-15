@@ -1,109 +1,89 @@
 import React from 'react';
 import './SearchBar.css';
-import config from '../../util/config';
+import Recruit from '../../util/Recruit';
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      term: '',
-      location: '',
-      sortBy: 'best_match'
+      latitude: '',
+      longitude: '',
+      range: '1',
     };
 
-    // this.handleTermChange = this.handleTermChange.bind(this);
-    this.handleLocationChange = this.handleLocationChange.bind(this);
+    this.rangeOptions = {
+      "300M": "1",
+      "500M": "2",
+      "1000M": "3",
+    };
+
     this.handleSearch = this.handleSearch.bind(this);
-    this.handleSortByChange = this.handleSortByChange.bind(this);
-    this.handleLocationTranslation = this.handleLocationTranslation.bind(this);
-    this.triggerSearch = this.triggerSearch.bind(this);
+    this.handleRangeChange = this.handleRangeChange.bind(this);
+    this.handleLatitudeChange = this.handleLatitudeChange.bind(this);
+    this.handleLongitudeChange = this.handleLongitudeChange.bind(this);
+  };
 
-    this.sortByOptions = {
-      'おすすめ順': 'best_match',
-      '評価順': 'rating',
-      '口コミ順': 'review_count'
-    };
-
-  }
-
-  getSortByClass(sortByOption) {
-    if (this.state.sortBy === sortByOption) {
-      return 'active';
-    }
-    return '';
-  }
-
-  handleSortByChange(sortByOption) {
-    this.setState({sortBy: sortByOption});
-  }
-
-  handleLocationChange(event) {
-    this.setState({location: event.target.value});
-  }
-
-  handleLocationTranslation(ogLocation){
-    fetch(`https://google-translate20.p.rapidapi.com/translate?text=${ogLocation}&tl=en&sl=ja`, {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-key": config['x-rapidapi-key'],
-        "x-rapidapi-host": config['x-rapidapi-host']
-      }
-    })
-    .then(response => {
-          return response.json();
-        }).then(jsonResponse => {
-          const translation = jsonResponse.data.translation
-          console.log(translation);
-          this.setState({location: translation});
-          this.handleSearch();
-        });
-  }
-
-
-  triggerSearch(event){
-    const location = this.state.location
-    if(!/^[a-zA-Z ]+$/.test(location)){
-      this.handleLocationTranslation(location);
-      event.preventDefault();
-    }else{
-    this.handleSearch();
-    event.preventDefault();
-    };
-  }
-
-  handleSearch(){
-      this.props.searchYelp(this.state.location, this.state.sortBy);
-  }
-
-  renderSortByOptions() {
-    return Object.keys(this.sortByOptions).map(sortByOption => {
-      let sortByOptionValue = this.sortByOptions[sortByOption];
-      return (<li className={this.getSortByClass(sortByOptionValue)}
-                  key={sortByOptionValue}
-                  onClick={this.handleSortByChange.bind(this, sortByOptionValue)}>
-                {sortByOption}
+  //Code on Range Settings
+  renderRangeOptions() {
+    return Object.keys(this.rangeOptions).map(rangeOption => {
+      let rangeOptionValue = this.rangeOptions[rangeOption];
+      return (<li className={this.getRangeClass(rangeOptionValue)}
+                  key={rangeOptionValue}
+                  onClick={this.handleRangeChange.bind(this, rangeOptionValue)}>
+                {rangeOption}
              </li>);
     });
   }
 
-  render() {
+  getRangeClass(rangeOptions) {
+    if (this.state.range === rangeOptions) {
+      return 'active';
+    }
+    return '';
+  };
+  //Code on Range Settings ^^^
+
+  //Handle changes
+  handleRangeChange(rangeOptions) {
+    this.setState({range: rangeOptions});
+  };
+
+  handleLatitudeChange(latitude){
+    this.setState({latitude: latitude});
+  };
+
+  handleLongitudeChange(longitude){
+    this.setState({longitude: longitude});
+  };
+
+  //Handle changes ^^^
+  
+  //HandleSearch
+  handleSearch(){
+    navigator.geolocation.getCurrentPosition(response =>{
+      this.handleLatitudeChange(response.coords.latitude);
+      this.handleLongitudeChange(response.coords.longitude);
+      this.props.searchRecruit(this.state.latitude, this.state.longitude, this.state.range);
+    })
+  };
+  //HandleSearch ^^^
+
+  render(){
     return (
       <div className="SearchBar">
         <div className="SearchBar-sort-options">
+          <h2>捜査距離を選んでください</h2>
           <ul>
-            {this.renderSortByOptions()}
+            {this.renderRangeOptions()}
           </ul>
         </div>
-        <div className="SearchBar-fields">
-          <input placeholder="どの辺のお店をお探したいですか？" onChange={this.handleLocationChange}/>
-        </div>
         <div className="SearchBar-submit">
-          <button onClick={this.triggerSearch} onKeyDown>レッツゴー!</button>
+          <button onClick={this.handleSearch}>レッツゴー!</button>
         </div>
       </div>
     );
   }
-}
+};
 
 export default SearchBar;
