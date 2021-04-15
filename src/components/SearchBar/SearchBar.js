@@ -79,7 +79,7 @@ class SearchBar extends React.Component {
           </ul>
         </div>
         <div className="SearchBar-submit">
-          <button onClick={this.handleSearch}>レッツゴー!</button>
+          <button onClick={this.handleSearch}>検索スタート!</button>
         </div>
       </div>
     );

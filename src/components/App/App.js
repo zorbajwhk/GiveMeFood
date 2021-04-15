@@ -41,8 +41,8 @@ class App extends React.Component {
         </div>
       
         <div className="footer">
-          <small><a target="_black" href="https://github.com/zorbajwhk/GiveMeFood">GiveME<span role="img" aria-label="Food">🍽</span></a> v1.0.0 | Made with <span role="img" aria-label="ハート">❤️</span></small>
-          <small>Copyright © <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/zorbajobswong/">Zorba Jobs Wong</a>, All Rights Reserved.</small>
+          <small><a target="_black" rel="noopener noreferrer nofollow" href="https://github.com/zorbajwhk/GiveMeFood">GiveME<span role="img" aria-label="Food">🍽</span></a> v1.0.0 | Made with <span role="img" aria-label="ハート">❤️</span></small>
+          <small>Copyright © <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.linkedin.com/in/zorbajobswong/">Zorba Jobs Wong</a>, All Rights Reserved.</small>
         </div>
 
       </div>
