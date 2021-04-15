@@ -30,12 +30,14 @@ class BusinessImage extends React.Component{
         return(
             <div className="BusinessImage">
                 <img className="normal" src={this.src} alt={this.alt} onClick={this.onClickHandeler}/>
+                
                 {this.state.isOpen && (
                     <dialog className="dialog" open>
                     <span className="close" onClick={this.onClickHandeler}>&times;</span>
                     <img className="popup" src={this.src} alt={this.alt} onClick={this.onClickHandeler}/>
                     </dialog>
-            )}
+                )}
+
             </div>
         );
     }
