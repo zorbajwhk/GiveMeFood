@@ -5,6 +5,7 @@ import PWAPrompt from 'react-ios-pwa-prompt';
 import register from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
 ReactDOM.render(<PWAPrompt
                 timesToShow={3}
                 delay={1000}

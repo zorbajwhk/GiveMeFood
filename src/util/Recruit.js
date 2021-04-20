@@ -15,6 +15,9 @@ const Recruit ={
                     id: shops.id,
                     name: shops.name,
                     slogen: shops.catch,
+                    shopMemo: shops.shop_detail_memo,
+                    genre: shops.genre.name,
+                    genreDescription: shops.genre.catch,
                     card: shops.card,
                     imgPc: shops.photo.pc.l,
                     imgMobile: shops.photo.mobile.l,
@@ -23,11 +26,17 @@ const Recruit ={
                     address: shops.address,
                     station: shops.station_name,
                     access: shops.access,
+                    parking: shops.parking,
                     budget: shops.budget.name,
+                    budgetAvg: shops.budget.average,
+                    budgetMemo: shops.budget_memo,
+                    capacity: shops.capacity,
                     openTime: shops.open,
                     dayOff: shops.close,
+                    latitude: shops.lat,
+                    longitude: shops.lng,
                     url: shops.urls.pc,
-                    googleURL: `https://www.google.com/maps/search/?api=1&query=${shops.name}+${shops.address}`,
+                    googleUrl: `https://www.google.com/maps/search/?api=1&query=${shops.name}+${shops.address}`,
                 }));
             }})
         .catch(error => console.log(error));

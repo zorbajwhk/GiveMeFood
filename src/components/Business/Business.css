@@ -1,60 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap");
-
 .Business {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   color: #fff;
-  font-family: "Noto Sans JP", sans-serif;
   width: 16.66rem;
   margin: 0 0.5rem 2.3rem 0.5rem;
 }
 
-.Business h2 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
+.Business .Business___information h2 {
+  font-size: 1.3rem;
 }
 
-.Business-information {
-  display: flex;
-  justify-content: space-between;
-}
-
-.Business-information p {
-  font-size: 0.88rem;
-  font-weight: 300;
+.Business .Business___information p {
+  color: rgb(247, 247, 247);
+  font-size: 0.8rem;
+  font-weight: 100;
   line-height: 1rem;
+  margin: 5px 0;
 }
 
-.Business-address {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.Business-reviews {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: right;
-}
-
-.Business-reviews h3 {
+.Business .Business___information h3 {
   color: #fff;
-  font-weight: 600;
-}
-
-.Business-reviews .rating {
-  font-size: 0.88rem;
-  line-height: 1rem;
-}
-
-.Business a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.Business a:hover {
-  color: #999;
+  font-size: 0.9rem;
+  font-weight: 100;
 }

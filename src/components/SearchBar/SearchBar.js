@@ -73,7 +73,7 @@ class SearchBar extends React.Component {
     return (
       <div className="SearchBar">
         <div className="SearchBar-sort-options">
-          <h2>捜査距離を選んでください</h2>
+          <h2>自身との検索範囲を選んでください</h2>
           <ul>
             {this.renderRangeOptions()}
           </ul>
