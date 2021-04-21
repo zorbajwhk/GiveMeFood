@@ -59,7 +59,7 @@
   border-radius: 4px;
   border-color: #fff;
   padding: 0.5rem 2rem;
-  background-color: #ae6f23;
+  background-color: #ad8551;
   color: #ffffff;
   font-weight: 600;
   font-size: 1rem;
@@ -68,7 +68,7 @@
 
 .SearchBar-submit button:hover {
   cursor: pointer;
-  background-color: #ad8551;
+  background-color: #ae6f23;
   color: #fff;
 }
 
