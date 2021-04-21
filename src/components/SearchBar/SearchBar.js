@@ -22,6 +22,16 @@ class SearchBar extends React.Component {
     this.handleRangeChange = this.handleRangeChange.bind(this);
     this.handleLatitudeChange = this.handleLatitudeChange.bind(this);
     this.handleLongitudeChange = this.handleLongitudeChange.bind(this);
+    this.componentDidMount = this.componentDidMount(this);
+  };
+
+  //Check if Location is workiing
+  componentDidMount() {
+    if ("geolocation" in navigator) {
+      console.log("Available");
+    } else {
+      console.log("Not Available");
+    }
   };
 
   //Code on Range Settings
@@ -76,6 +86,8 @@ class SearchBar extends React.Component {
   //HandleSearch ^^^
 
   render(){
+    this.componentDidMount;
+
     return (
       <div className="SearchBar">
         <div className="SearchBar-sort-options">
