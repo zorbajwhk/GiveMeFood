@@ -12,6 +12,11 @@ A serverless client-side React application project, utilizing the Recuit API to 
 
 ## Update Logs
 
+v1.0.1 Update Log:
+
+- Enchanced image visual.
+- Fixed typos within App.
+
 v1.0.0 Update Log:
 
 - Project initiation.

@@ -1,9 +1,8 @@
 /* Image-container */
 .BusinessImage {
   margin-bottom: 1rem;
-  box-shadow: 2px 2px 5px rgb(175, 175, 175);
   border-radius: 0.5rem;
-  background-color: #fff;
+  box-shadow: 0 0 5px #fff;
 }
 
 .BusinessImage .list {
@@ -17,6 +16,7 @@
 
 .BusinessImage .list:hover {
   opacity: 0.7;
+  background-color: #fff;
 }
 
 .dialog {

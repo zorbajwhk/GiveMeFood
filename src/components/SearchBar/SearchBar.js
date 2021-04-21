@@ -61,11 +61,17 @@ class SearchBar extends React.Component {
   
   //HandleSearch
   handleSearch(){
-    navigator.geolocation.getCurrentPosition(response =>{
+    if (!navigator.geolocation){
+      console.log("Geolocation is not supported by your browser");
+      return;
+    };
+
+    navigator.geolocation.getCurrentPosition(response => {
+      console.log("locating...");
       this.handleLatitudeChange(response.coords.latitude);
       this.handleLongitudeChange(response.coords.longitude);
       this.props.searchRecruit(this.state.latitude, this.state.longitude, this.state.range);
-    })
+    });
   };
   //HandleSearch ^^^
 

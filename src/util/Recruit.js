@@ -4,6 +4,7 @@ const proxyURL = "https://small-art-ab11.zjw-cors-anywhere.workers.dev/?";
 const Recruit ={
     
     search(latitude, longitude, range){
+        console.log("I'm here");
         return fetch(`${proxyURL}http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${apiKeys.recruitAPI}&lat=${latitude}&lng=${longitude}&range=${range}&count=40&format=json`)
         .then(response => {
             return response.json();
