@@ -12,6 +12,15 @@ A serverless client-side React application project, utilizing the Recuit API to 
 
 ## Update Logs
 
+v2.0.0 Update Log:
+
+- Added filtering search system.
+- Added icons to represent available services to each store pages.
+- Added random slogen system to stores that slogen is "undefined".
+- Added default message to stores that message is "undefined".
+- Fixed app box-module spacings.
+- Changed app background image.
+
 v1.0.1 Update Log:
 
 - Enchanced image visual.
