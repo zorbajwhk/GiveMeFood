@@ -1,6 +1,6 @@
 import React from 'react';
 import './BusinessImage.css';
-import ShopDetails from '../ShopDetails/ShopDetails';
+import BusinessDetails from '../BusinessDetails/BusinessDetails';
 
 
 class BusinessImage extends React.Component{
@@ -11,10 +11,10 @@ class BusinessImage extends React.Component{
             "isOpen": false,
         }
 
-        this.onClickHandeler = this.onClickHandeler.bind(this);
+        this.onClickHandler = this.onClickHandler.bind(this);
     }
 
-    onClickHandeler(event){
+    onClickHandler(event){
         if(this.state.isOpen === false){
             this.setState({isOpen: true});
             return;
@@ -27,12 +27,12 @@ class BusinessImage extends React.Component{
     render(){
         return(
             <div className="BusinessImage">
-                <img className="list" src={this.props.business.imgPc} alt={this.props.business.name} onClick={this.onClickHandeler}/>
+                <img className="list" src={this.props.business.img.imgPc} alt={this.props.business.name} onClick={this.onClickHandler}/>
                 
                 {this.state.isOpen && (
                     <dialog className="dialog" open>
-                    <span className="close" onClick={this.onClickHandeler}>&times;</span>
-                    <ShopDetails business={this.props.business} />
+                    <span className="close" onClick={this.onClickHandler}>&times;</span>
+                    <BusinessDetails business={this.props.business} />
                     </dialog>
                 )}
 

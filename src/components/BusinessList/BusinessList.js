@@ -6,10 +6,17 @@ class BusinessList extends React.Component {
   render() {
     return (
       <div className="BusinessList">
+        {/* Show no result text when array is 0 */}
         {
-          this.props.businesses.map(business => {
-            return <Business business={business} key={business.id} />
-          })
+          this.props.noResults == true &&
+          <h2>お店情報は見つかりませんでした</h2>
+        }
+        {/* Map array from Recuit API call */}
+        {
+          this.props.noResults == false &&
+            this.props.businesses.map(business => {
+              return <Business business={business} key={business.id} />
+            })
         }
       </div>
     );

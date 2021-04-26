@@ -2,5 +2,17 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 4rem 10% 1rem 10%;
+  margin: 3rem 10% 1rem 10%;
+}
+
+.BusinessList h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 0 2rem 0;
+}
+
+@media only screen and (max-width: 560px) {
+  .BusinessList h2 {
+    font-size: 1.5rem;
+  }
 }
