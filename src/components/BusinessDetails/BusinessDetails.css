@@ -60,6 +60,7 @@
 }
 
 .detailPage___info___details dd {
+  line-height: 20px;
   margin: 0 0 1rem 1.5rem;
   font-size: 0.9rem;
   color: rgb(247, 247, 247);
@@ -78,14 +79,14 @@
 }
 
 .detailPage___info___access dd {
-  line-height: 25px;
+  line-height: 20px;
   margin: 0 0 1rem 1.5rem;
   font-size: 0.9rem;
   color: rgb(247, 247, 247);
 }
 
 .detailPage___info___access p {
-  line-height: 25px;
+  line-height: 20px;
 }
 
 .detailPage___info___access a {
@@ -103,7 +104,7 @@
   .detailPage {
     height: auto;
     width: 95%;
-    margin: 0 0.1rem 4rem 0.1rem;
+    margin: 0 0.2rem 4rem 0.1rem;
     flex-direction: column;
   }
 
@@ -157,7 +158,6 @@
   }
 
   .detailPage___info___access dd {
-    line-height: 25px;
     margin-bottom: 10px;
     font-size: 1rem;
   }

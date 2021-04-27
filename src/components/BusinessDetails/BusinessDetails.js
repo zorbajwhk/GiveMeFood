@@ -27,11 +27,11 @@ class BusinessDetails extends React.Component{
                                 <dt>休日情報</dt>
                                 <dd>{this.props.business.dayOff}</dd>
                                 <dt>ディナー予算</dt>
-                                <dd>{this.props.business.budget} (平均予算{this.props.business.budgetAvg}) <br/> {this.props.business.budgetMemo}</dd>
+                                <dd>{this.props.business.budget} <br/> (平均予算{this.props.business.budgetAvg}) <br/> {this.props.business.budgetMemo}</dd>
                                 <dt>店舗メッセージ</dt>
                                 {
                                     !this.props.business.shopMemo && 
-                                    <dd>よこそう！</dd> 
+                                    <dd>{this.props.business.name}へよこそう！</dd> 
                                 }
                                 <dd>{this.props.business.shopMemo}</dd>
                             </dl>
